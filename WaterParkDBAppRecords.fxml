@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="556.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar prefHeight="25.0" prefWidth="755.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="529.0" prefWidth="834.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TabPane prefHeight="521.0" prefWidth="820.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Customer Records">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="820.0">
+                           <children>
+                              <TableView prefHeight="209.0" prefWidth="821.0">
+                                <columns>
+                                  <TableColumn id="CRCustomerNumberColumn" fx:id="CRCustomerNumberColumn" prefWidth="76.00000250339508" text="Customer #" />
+                                  <TableColumn id="lastNameColumn" fx:id="lastNameColumn" prefWidth="133.33332061767578" text="Last Name" />
+                                    <TableColumn id="firstNameColumn" fx:id="firstNameColumn" prefWidth="121.33332824707031" text="First Name" />
+                                    <TableColumn id="ageColumn" fx:id="ageColumn" prefWidth="40.66668701171875" text="Age" />
+                                    <TableColumn id="phoneColumn" fx:id="phoneColumn" prefWidth="130.6666259765625" text="Phone #" />
+                                    <TableColumn id="emailColumn" fx:id="emailColumn" prefWidth="172.66671752929688" text="Email" />
+                                    <TableColumn id="visitsColumn" fx:id="visitsColumn" minWidth="2.0" prefWidth="58.00006103515625" text="Visits" />
+                                    <TableColumn id="pwdStatusColumn" fx:id="pwdStatusColumn" prefWidth="84.66670735677087" text="PWD Status" />
+                                </columns>
+                              </TableView>
+                              <VBox layoutX="185.0" layoutY="220.0" prefHeight="271.0" prefWidth="451.0">
+                                 <children>
+                                    <HBox prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="26.0" prefWidth="63.0" text="Last Name" />
+                                          <TextField fx:id="txtLastName" prefHeight="25.0" prefWidth="164.0" />
+                                          <Label prefHeight="30.0" prefWidth="63.0" text="First Name" />
+                                          <TextField fx:id="txtFirstName" prefHeight="25.0" prefWidth="165.0" />
+                                       </children>
+                                    </HBox>
+                                    <Label layoutX="10.0" layoutY="95.0" text="Age" />
+                                    <TextField fx:id="txtAge" layoutX="10.0" layoutY="113.0" />
+                                    <Label layoutX="10.0" layoutY="138.0" text="Phone" />
+                                    <TextField fx:id="txtPhone" layoutX="10.0" layoutY="155.0" />
+                                    <Label layoutX="10.0" layoutY="181.0" text="Email" />
+                                    <TextField fx:id="txtEmail" layoutX="10.0" layoutY="198.0" />
+                                    <Label layoutX="10.0" layoutY="223.0" text="Visits" />
+                                    <TextField fx:id="txtVisits" layoutX="10.0" layoutY="241.0" prefHeight="29.0" prefWidth="451.0" />
+                                    <CheckBox fx:id="chkPWD" mnemonicParsing="false" prefHeight="26.0" prefWidth="93.0" text="PWD Status" />
+                                    <HBox layoutX="10.0" layoutY="259.0" prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Button fx:id="CRbtnAdd" mnemonicParsing="false" onAction="#addCustomer" text="Add" />
+                                          <Button fx:id="CRbtnUpdate" mnemonicParsing="false" onAction="#updateCustomer" text="Update" />
+                                          <Button fx:id="CRbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteCustomer" text="Delete" />
+                                          <Button fx:id="CRbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="txtCRSearch" layoutX="20.0" layoutY="327.0" />
+                              <Button fx:id="CRbtnSearch" layoutX="69.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Customer Incident Records">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="804.0">
+                           <children>
+                              <TableView prefHeight="419.0" prefWidth="829.0">
+                                 <columns>
+                                    <TableColumn id="cirIncidentNumberColumn" fx:id="cirIncidentNumberColumn" prefWidth="163.33333837985992" text="Incident #" />
+                                    <TableColumn id="cirCustomerNumberColumn" fx:id="cirCustomerNumberColumn" prefWidth="143.3333282470703" text="Customer #" />
+                                 </columns>
+                              </TableView>
+                              <VBox layoutX="189.0" layoutY="428.0" prefHeight="65.0" prefWidth="451.0">
+                                 <children>
+                                    <HBox prefHeight="29.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="27.0" prefWidth="61.0" text="Incident #" />
+                                          <TextField fx:id="txtCIRIncidentNumber" prefHeight="25.0" prefWidth="153.0" />
+                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="71.0" text=" Customer #" />
+                                          <TextField fx:id="txtCIRCustomerNumber" layoutX="73.0" layoutY="10.0" prefHeight="25.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="259.0" prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Button fx:id="CIRbtnAdd" mnemonicParsing="false" onAction="#addCustomerIncident" text="Add" />
+                                          <Button fx:id="CIRbtnUpdate" mnemonicParsing="false" onAction="#updateCustomerIncident" text="Update" />
+                                          <Button fx:id="CIRbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteCustomerIncident" text="Delete" />
+                                          <Button fx:id="CIRbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="txtCIRSearch" layoutX="23.0" layoutY="428.0" />
+                              <Button fx:id="CIRbtnSearch" layoutX="72.0" layoutY="461.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Locker Records">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="820.0">
+                           <children>
+                              <TableView layoutX="-1.0" prefHeight="357.0" prefWidth="821.0">
+                                 <columns>
+                                    <TableColumn id="LRLockerNumberColumn" fx:id="LRLockerNumberColumn" prefWidth="123.99998474121094" text="Locker #" />
+                                    <TableColumn id="LRTicketNumberColumn" fx:id="LRTicketNumberColumn" prefWidth="132.66665649414062" text="Ticket #" />
+                                    <TableColumn id="LRSizeColumn" fx:id="LRSizeColumn" prefWidth="112.6666259765625" text="Size" />
+                                    <TableColumn id="LRAvailabilityStatusColumn" fx:id="LRAvailabilityStatusColumn" minWidth="0.0" prefWidth="136.66668701171875" text="Availability Status" />
+                                 </columns>
+                              </TableView>
+                              <VBox layoutX="185.0" layoutY="364.0" prefHeight="114.0" prefWidth="451.0">
+                                 <children>
+                                    <HBox prefHeight="28.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="31.0" prefWidth="51.0" text="Locker #" />
+                                          <TextField fx:id="txtLRLockerNumber" prefHeight="25.0" prefWidth="170.0" />
+                                          <Label prefHeight="27.0" prefWidth="51.0" text=" Ticket #" />
+                                          <TextField fx:id="txtLRTicketNumber" prefHeight="25.0" prefWidth="181.0" />
+                                       </children>
+                                    </HBox>
+                                    <MenuButton fx:id="mnbtnSize" mnemonicParsing="false" text="Size">
+                                      <items>
+                                        <MenuItem fx:id="mnSmall" mnemonicParsing="false" text="Small" />
+                                        <MenuItem fx:id="mnMedium" mnemonicParsing="false" text="Medium" />
+                                          <MenuItem fx:id="mnLarge" mnemonicParsing="false" text="Large" />
+                                      </items>
+                                    </MenuButton>
+                                    <CheckBox fx:id="chkAvailabilityStatus" mnemonicParsing="false" prefHeight="22.0" prefWidth="115.0" text="Availability Status" />
+                                    <HBox layoutX="10.0" layoutY="259.0" prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Button fx:id="LRbtnAdd" mnemonicParsing="false" onAction="#addLocker" text="Add" />
+                                          <Button fx:id="LRbtnUpdate" mnemonicParsing="false" onAction="#updateLocker" text="Update" />
+                                          <Button fx:id="LRbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteLocker" text="Delete" />
+                                          <Button fx:id="LRbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="txtLRSearch" layoutX="21.0" layoutY="421.0" />
+                              <Button fx:id="LRbtnSearch" layoutX="70.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Ticket Records">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="820.0">
+                           <children>
+                              <TableView prefHeight="331.0" prefWidth="821.0">
+                                 <columns>
+                                    <TableColumn id="TRTicketNumberColumn" fx:id="TRTicketNumberColumn" prefWidth="123.99998474121094" text="Ticket #" />
+                                    <TableColumn id="TRCustomerNumberColumn" fx:id="TRCustomerNumberColumn" prefWidth="132.66665649414062" text="Customer #" />
+                                    <TableColumn id="TRTicketTypeColumn" fx:id="TRTicketTypeColumn" prefWidth="112.6666259765625" text="Ticket Type" />
+                                    <TableColumn id="TRDatePurchasedColumn" fx:id="TRDatePurchasedColumn" minWidth="0.0" prefWidth="136.66668701171875" text="Date Purchased" />
+                                    <TableColumn id="TRDateOfUseColumn" fx:id="TRDateOfUseColumn" prefWidth="124.0" text="Date of Use" />
+                                 </columns>
+                              </TableView>
+                              <VBox layoutX="185.0" layoutY="342.0" prefHeight="136.0" prefWidth="451.0">
+                                 <children>
+                                    <HBox prefHeight="28.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="31.0" prefWidth="51.0" text="Ticket #" />
+                                          <TextField fx:id="txtTRTicketNumber" prefHeight="25.0" prefWidth="164.0" />
+                                          <Label prefHeight="30.0" prefWidth="71.0" text=" Customer #" />
+                                          <TextField fx:id="txtTRCustomerNumber" prefHeight="25.0" prefWidth="165.0" />
+                                       </children>
+                                    </HBox>
+                                    <Label layoutX="10.0" layoutY="95.0" text="Ticket Type" />
+                                    <TextField fx:id="txtTRTicketType" layoutX="10.0" layoutY="113.0" />
+                                    <HBox prefHeight="32.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="26.0" prefWidth="89.0" text="Date Purchased" />
+                                          <TextField fx:id="txtTRDatePurchased" prefHeight="25.0" prefWidth="137.0" />
+                                          <Label prefHeight="26.0" prefWidth="71.0" text=" Date of Use" />
+                                          <TextField fx:id="txtTRDateOfUse" prefHeight="21.0" prefWidth="153.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="259.0" prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Button fx:id="TRbtnAdd" mnemonicParsing="false" onAction="#addTicket" text="Add" />
+                                          <Button fx:id="TRbtnUpdate" mnemonicParsing="false" onAction="#updateTicket" text="Update" />
+                                          <Button fx:id="TRbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteTicket" text="Delete" />
+                                          <Button fx:id="TRbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="txtTRSearch" layoutX="24.0" layoutY="422.0" />
+                              <Button fx:id="TRbtnSearch" layoutX="73.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab text="Employee Records">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="804.0">
+                           <children>
+                              <TableView prefHeight="224.0" prefWidth="829.0">
+                                 <columns>
+                                    <TableColumn id="employeeNumberColumn" fx:id="employeeNumberColumn" prefWidth="76.00000250339508" text="Employee #" />
+                                    <TableColumn id="lastNameColumn" fx:id="employeeLastNameColumn" prefWidth="115.33331298828125" text="Last Name" />
+                                    <TableColumn id="firstNameColumn" fx:id="employeeFirstNameColumn" prefWidth="117.3333740234375" text="First Name" />
+                                    <TableColumn id="jobTitleColumn" fx:id="jobTitleColumn" prefWidth="93.99996948242188" text="Job Title" />
+                                    <TableColumn id="employeeDepartmentNumberColumn" fx:id="employeeDepartmentNumberColumn" prefWidth="89.3333740234375" text="Department #" />
+                                    <TableColumn id="employeePhoneColumn" fx:id="employeePhoneColumn" prefWidth="99.33328247070312" text="Phone #" />
+                                    <TableColumn id="employeeSalaryColumn" fx:id="employeeSalaryColumn" minWidth="2.0" prefWidth="97.33331298828125" text="Salary" />
+                                    <TableColumn id="employeeRideNumberColumn" fx:id="employeeRideNumberColumn" prefWidth="41.3333740234375" text="Ride #" />
+                                    <TableColumn id="employeeActiveStatusColumn" fx:id="employeeActiveStatusColumn" minWidth="2.0" prefWidth="83.55548095703125" text="Active Status" />
+                                 </columns>
+                              </TableView>
+                              <VBox layoutX="189.0" layoutY="231.0" prefHeight="267.0" prefWidth="451.0">
+                                 <children>
+                                    <HBox prefHeight="39.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="73.0" text="Employee #" />
+                                          <TextField fx:id="txtEmployeeNumber" prefHeight="25.0" prefWidth="133.0" />
+                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="51.0" text=" Salary" />
+                                          <TextField fx:id="txtSalary" layoutX="73.0" layoutY="10.0" prefHeight="25.0" prefWidth="221.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="26.0" prefWidth="63.0" text="Last Name" />
+                                          <TextField fx:id="txtEmpLastName" prefHeight="25.0" prefWidth="164.0" />
+                                          <Label prefHeight="30.0" prefWidth="63.0" text=" First Name" />
+                                          <TextField fx:id="txtEmpFirstName" prefHeight="25.0" prefWidth="165.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="39.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="63.0" text="Job Title" />
+                                          <TextField fx:id="txtJobTitle" prefHeight="25.0" prefWidth="136.0" />
+                                          <Label prefHeight="25.0" prefWidth="82.0" text=" Department #" />
+                                          <TextField fx:id="txtEmpDepartmentNumber" prefHeight="25.0" prefWidth="163.0" />
+                                       </children>
+                                    </HBox>
+                                    <Label layoutX="10.0" layoutY="181.0" text="Phone #" />
+                                    <TextField fx:id="txtEmpPhone" layoutX="10.0" layoutY="198.0" />
+                                    <Label layoutX="10.0" layoutY="223.0" text="Ride #" />
+                                    <TextField fx:id="txtEmpRideNumber" layoutX="10.0" layoutY="241.0" prefHeight="29.0" prefWidth="451.0" />
+                                    <CheckBox fx:id="chkERActive" mnemonicParsing="false" prefHeight="26.0" prefWidth="93.0" text="Active Status" />
+                                    <HBox layoutX="10.0" layoutY="259.0" prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Button fx:id="ERbtnAdd" mnemonicParsing="false" onAction="#addEmployee" text="Add" />
+                                          <Button fx:id="ERbtnUpdate" mnemonicParsing="false" onAction="#updateEmployee" text="Update" />
+                                          <Button fx:id="ERbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteEmployee" text="Delete" />
+                                          <Button fx:id="ERbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="txtERSearch" layoutX="22.0" layoutY="419.0" />
+                              <Button fx:id="ERbtnSearch" layoutX="71.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Employee Role Records">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="804.0">
+                           <children>
+                              <TableView prefHeight="395.0" prefWidth="829.0">
+                                 <columns>
+                                    <TableColumn id="employeeRoleNumberColumn" fx:id="employeeRoleNumberColumn" prefWidth="125.3333078622818" text="Employee #" />
+                                    <TableColumn id="employeeRoleTitle" fx:id="employeeRoleTitle" prefWidth="413.99998474121094" text="Title" />
+                                    <TableColumn id="employeeRoleFromDate" fx:id="employeeRoleFromDate" prefWidth="148.0" text="From Date" />
+                                    <TableColumn id="employeeRoleToDate" fx:id="employeeRoleToDate" prefWidth="141.33331298828125" text="To Date" />
+                                 </columns>
+                              </TableView>
+                              <VBox layoutX="189.0" layoutY="400.0" prefHeight="91.0" prefWidth="451.0">
+                                 <children>
+                                    <HBox prefHeight="39.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="73.0" text="Employee #" />
+                                          <TextField fx:id="txtERREmpID" prefHeight="25.0" prefWidth="133.0" />
+                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="36.0" text=" Title" />
+                                          <TextField fx:id="txtERRTitle" layoutX="73.0" layoutY="10.0" prefHeight="25.0" prefWidth="221.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="26.0" prefWidth="63.0" text="From Date" />
+                                          <TextField fx:id="txtERRFromDate" prefHeight="25.0" prefWidth="164.0" />
+                                          <Label prefHeight="30.0" prefWidth="49.0" text=" To Date" />
+                                          <TextField fx:id="txtERRToDate" prefHeight="25.0" prefWidth="179.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="259.0" prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Button fx:id="ERRbtnAdd" mnemonicParsing="false" onAction="#addEmpRole" text="Add" />
+                                          <Button fx:id="ERRbtnUpdate" mnemonicParsing="false" onAction="#updateEmpRole" text="Update" />
+                                          <Button fx:id="ERRbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteEmpRole" text="Delete" />
+                                          <Button fx:id="ERRbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="txtERRSearch" layoutX="23.0" layoutY="417.0" />
+                              <Button fx:id="ERRbtnSearch" layoutX="72.0" layoutY="449.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Ride Attraction Records">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView prefHeight="202.0" prefWidth="821.0">
+                                 <columns>
+                                    <TableColumn id="rideNumberColumn" fx:id="rideNumberColumn" prefWidth="53.555546283721924" text="Ride #" />
+                                    <TableColumn id="rideNameColumn" fx:id="rideNameColumn" prefWidth="120.22220993041992" text="Name" />
+                                    <TableColumn id="rideDescriptionColumn" fx:id="rideDescriptionColumn" prefWidth="176.4444122314453" text="Description" />
+                                    <TableColumn id="rideDateOfInspectionColumn" fx:id="rideDateOfInspectionColumn" prefWidth="116.0" text="Date of Inspection" />
+                                    <TableColumn id="rideCapacityColumn" fx:id="rideCapacityColumn" prefWidth="63.555572509765625" text="Capacity" />
+                                    <TableColumn id="rideMinHeightColumn" fx:id="rideMinHeightColumn" prefWidth="86.44439697265625" text="Min. Height" />
+                                    <TableColumn id="rideTicketRequirementColumn" fx:id="rideTicketRequirementColumn" minWidth="2.0" prefWidth="121.55560302734375" text="Ticket Requirement" />
+                                    <TableColumn id="rideStatusColumn" fx:id="rideStatusColumn" prefWidth="84.66670735677087" text="Status" />
+                                 </columns>
+                              </TableView>
+                              <VBox layoutX="185.0" layoutY="202.0" prefHeight="291.0" prefWidth="451.0">
+                                 <children>
+                                    <Label text="Ride #" />
+                                    <TextField fx:id="txtRARRideNumber" prefHeight="21.0" prefWidth="451.0" />
+                                    <HBox prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="26.0" prefWidth="40.0" text="Name" />
+                                          <TextField fx:id="txtRARName" prefHeight="25.0" prefWidth="171.0" />
+                                          <Label prefHeight="26.0" prefWidth="33.0" text=" D.o.I." />
+                                          <TextField fx:id="txtRARDateOfInspection" prefHeight="25.0" prefWidth="208.0" />
+                                       </children>
+                                    </HBox>
+                                    <Label layoutX="10.0" layoutY="95.0" text="Description" />
+                                    <TextField fx:id="txtRARDescription" layoutX="10.0" layoutY="113.0" />
+                                    <Label layoutX="10.0" layoutY="138.0" text="Capacity" />
+                                    <TextField fx:id="txtRARCapacity" layoutX="10.0" layoutY="155.0" />
+                                    <Label layoutX="10.0" layoutY="181.0" text="Minimum Height" />
+                                    <TextField fx:id="txtRARMinimumHeight" layoutX="10.0" layoutY="198.0" />
+                                    <Label layoutX="10.0" layoutY="223.0" text="Ticket Requirement" />
+                                    <TextField fx:id="txtRARTicketRequirement" layoutX="10.0" layoutY="241.0" prefHeight="29.0" prefWidth="451.0" />
+                                    <HBox layoutX="10.0" layoutY="53.0" prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <CheckBox fx:id="chkRARActive" mnemonicParsing="false" prefHeight="26.0" prefWidth="93.0" text="Active Status" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="259.0" prefHeight="34.0" prefWidth="451.0">
+                                       <children>
+                                          <Button fx:id="RARbtnAdd" mnemonicParsing="false" onAction="#addRideAttraction" text="Add" />
+                                          <Button fx:id="RARbtnUpdate" mnemonicParsing="false" onAction="#updateRideAttraction" text="Update" />
+                                          <Button fx:id="RARbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteRideAttraction" text="Delete" />
+                                          <Button fx:id="RARbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="txtRARSearch" layoutX="21.0" layoutY="420.0" />
+                              <Button fx:id="RARbtnSearch" layoutX="70.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Quality Inspection Records">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView prefHeight="291.0" prefWidth="821.0">
+                                 <columns>
+                                    <TableColumn id="rideNumberColumn" fx:id="rideNumberColumn1" prefWidth="53.555546283721924" text="Ride #" />
+                                    <TableColumn id="qualityInspectionDateTaken" fx:id="qualityInspectionDateTaken" prefWidth="120.22220993041992" text="Date Taken" />
+                                    <TableColumn id="qualityInspectionPHLevel" fx:id="qualityInspectionPHLevel" prefWidth="89.99998474121094" text="PH Level" />
+                                    <TableColumn id="qualityInspectionChlorineLevel" fx:id="qualityInspectionChlorineLevel" prefWidth="105.3333740234375" text="Chlorine Level" />
+                                    <TableColumn id="qualityInspectionWaterTemperature" fx:id="qualityInspectionWaterTemperature" prefWidth="124.66668701171875" text="Water Temperature" />
+                                    <TableColumn id="qualityInspectionViolationCount" fx:id="qualityInspectionViolationCount" prefWidth="107.33331298828125" text="Violation Count" />
+                                    <TableColumn id="qualityInspectionViolationDescription" fx:id="qualityInspectionViolationDescription" minWidth="2.0" prefWidth="222.0" text="Violation Description" />
+                                 </columns>
+                              </TableView>
+                              <VBox layoutX="184.0" layoutY="296.0" prefHeight="196.0" prefWidth="451.0">
+                                 <children>
+                                    <HBox prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="26.0" prefWidth="47.0" text="Ride #" />
+                                          <TextField fx:id="txtQIRRideNumber" prefHeight="25.0" prefWidth="169.0" />
+                                          <Label prefHeight="26.0" prefWidth="65.0" text=" Date Taken" />
+                                          <TextField fx:id="txtQIRDateTaken" prefHeight="25.0" prefWidth="171.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="37.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="26.0" prefWidth="54.0" text="PH Level" />
+                                          <TextField fx:id="txtPHLevel" prefHeight="25.0" prefWidth="65.0" />
+                                          <Label prefHeight="26.0" prefWidth="83.0" text=" Chlorine Level" />
+                                          <TextField fx:id="txtChlorineLevel" prefHeight="25.0" prefWidth="71.0" />
+                                          <Label prefHeight="26.0" prefWidth="113.0" text=" Water Temperature" />
+                                          <TextField fx:id="txtWaterTemperature" prefHeight="25.0" prefWidth="69.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="37.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="99.0" text="Violation Count" />
+                                          <TextField fx:id="txtViolationCount" prefHeight="25.0" prefWidth="356.0" />
+                                       </children>
+                                    </HBox>
+                                    <Label layoutX="10.0" layoutY="223.0" text="Violation Description" />
+                                    <TextField fx:id="txtViolationDescription" layoutX="10.0" layoutY="241.0" prefHeight="29.0" prefWidth="451.0" />
+                                    <HBox layoutX="10.0" layoutY="259.0" prefHeight="30.0" prefWidth="451.0">
+                                       <children>
+                                          <Button fx:id="QIRbtnAdd" mnemonicParsing="false" onAction="#addQualityInspection" text="Add" />
+                                          <Button fx:id="QIRbtnUpdate" mnemonicParsing="false" onAction="#updateQualityInspection" text="Update" />
+                                          <Button fx:id="QIRbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteQualityInspection" text="Delete" />
+                                          <Button fx:id="QIRbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="txtQIRSearch" layoutX="22.0" layoutY="421.0" />
+                              <Button fx:id="QIRbtnSearch" layoutX="71.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Department Records">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="804.0">
+                           <children>
+                              <TableView prefHeight="395.0" prefWidth="829.0">
+                                 <columns>
+                                    <TableColumn id="departmentNumberColumn" fx:id="departmentNumberColumn" prefWidth="125.3333078622818" text="Department #" />
+                                    <TableColumn id="departmentNameColumn" fx:id="departmentNameColumn" prefWidth="555.9999465942383" text="Name" />
+                                    <TableColumn id="departmentManagerNumberColumn" fx:id="departmentManagerNumberColumn" prefWidth="145.3333740234375" text="Manager #" />
+                                 </columns>
+                              </TableView>
+                              <VBox layoutX="189.0" layoutY="400.0" prefHeight="91.0" prefWidth="451.0">
+                                 <children>
+                                    <HBox prefHeight="39.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="83.0" text="Department #" />
+                                          <TextField fx:id="txtDRDeptNumber" prefHeight="25.0" prefWidth="149.0" />
+                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="71.0" text=" Manager #" />
+                                          <TextField fx:id="txtDRManagerNumber" layoutX="73.0" layoutY="10.0" prefHeight="25.0" prefWidth="157.0" />
+                                       </children>
+                                    </HBox>
+                                    <Label prefHeight="26.0" prefWidth="63.0" text="Name" />
+                                    <TextField fx:id="txtDRName" prefHeight="25.0" prefWidth="164.0" />
+                                    <HBox layoutX="10.0" layoutY="259.0" prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Button fx:id="DRbtnAdd" mnemonicParsing="false" onAction="#addDepartment" text="Add" />
+                                          <Button fx:id="DRbtnUpdate" mnemonicParsing="false" onAction="#updateDepartment" text="Update" />
+                                          <Button fx:id="DRbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteDepartment" text="Delete" />
+                                          <Button fx:id="DRbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="txtDRSearch" layoutX="20.0" layoutY="418.0" />
+                              <Button fx:id="DRbtnSearch" layoutX="69.0" layoutY="449.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Department Manager Records">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="804.0">
+                           <children>
+                              <TableView prefHeight="395.0" prefWidth="829.0">
+                                 <columns>
+                                    <TableColumn id="dmDepartmentNumberColumn" fx:id="dmDepartmentNumberColumn" prefWidth="163.33333837985992" text="Department #" />
+                                    <TableColumn id="dmEmployeeNumberColumn" fx:id="dmEmployeeNumberColumn" prefWidth="143.3333282470703" text="Employee #" />
+                                    <TableColumn id="dmFromDate" fx:id="dmFromDate" minWidth="0.0" prefWidth="152.0" text="From Date" />
+                                    <TableColumn id="dmToDate" fx:id="dmToDate" minWidth="0.0" prefWidth="166.66671752929688" text="To Date" />
+                                 </columns>
+                              </TableView>
+                              <VBox layoutX="189.0" layoutY="400.0" prefHeight="91.0" prefWidth="451.0">
+                                 <children>
+                                    <HBox prefHeight="39.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="80.0" text="Department #" />
+                                          <TextField fx:id="txtDMRDeptNumber" prefHeight="25.0" prefWidth="148.0" />
+                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="24.0" prefWidth="71.0" text=" Employee #" />
+                                          <TextField fx:id="txtDMREmpNumber" layoutX="73.0" layoutY="10.0" prefHeight="25.0" prefWidth="155.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Label prefHeight="26.0" prefWidth="63.0" text="From Date" />
+                                          <TextField fx:id="txtDMRFromDate" prefHeight="25.0" prefWidth="164.0" />
+                                          <Label prefHeight="25.0" prefWidth="48.0" text=" To Date" />
+                                          <TextField fx:id="txtDMRToDate" prefHeight="25.0" prefWidth="179.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="259.0" prefHeight="35.0" prefWidth="451.0">
+                                       <children>
+                                          <Button fx:id="DMRbtnAdd" mnemonicParsing="false" onAction="#addDeptManager" text="Add" />
+                                          <Button fx:id="DMRbtnUpdate" mnemonicParsing="false" onAction="#updateDeptManager" text="Update" />
+                                          <Button fx:id="DMRbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteDeptManager" text="Delete" />
+                                          <Button fx:id="DMRbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="txtDMRSearch" layoutX="23.0" layoutY="416.0" />
+                              <Button fx:id="DMRbtnSearch" layoutX="72.0" layoutY="449.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
