@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="555.0" prefWidth="858.0">
+            <children>
+                <TabPane prefHeight="521.0" prefWidth="820.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Customer Records">
+                            <content>
+                                <fx:include source="Customer-Records.fxml" />
+                            </content>
+                        </Tab>
+                        <Tab text="Customer Incident Records">
+                          <content>
+                              <fx:include source="Customer-Incident-Records.fxml" />
+                          </content>
+                        </Tab>
+                        <Tab text="Incident Records">
+                          <content>
+                              <fx:include source="Incident-Records.fxml" />
+                          </content>
+                        </Tab>
+                        <Tab text="Locker Records">
+                           <content>
+                               <fx:include source="Locker-Records.fxml" />
+                           </content>
+                        </Tab>
+                        <Tab text="Ticket Records">
+                           <content>
+                               <fx:include source="Ticket-Records.fxml" />
+                           </content>
+                        </Tab>
+                        <Tab text="Employee Records">
+                           <content>
+                               <fx:include source="Employee-Records.fxml" />
+                           </content>
+                        </Tab>
+                        <Tab text="Employee Role Records">
+                           <content>
+                               <fx:include source="Employee-Role-Records.fxml" />
+                           </content>
+                        </Tab>
+                        <Tab text="Ride Attraction Records">
+                           <content>
+                               <fx:include source="Ride-Attraction-Records.fxml" />
+                           </content>
+                        </Tab>
+                        <Tab text="Quality Inspection Records">
+                           <content>
+                               <fx:include source="Quality-Inspection-Records.fxml" />
+                           </content>
+                        </Tab>
+                        <Tab text="Department Records">
+                           <content>
+                               <fx:include source="Department-Records.fxml" />
+                           </content>
+                        </Tab>
+                        <Tab text="Department Manager Records">
+                           <content>
+                               <fx:include source="Department-Manager-Records.fxml" />
+                           </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
