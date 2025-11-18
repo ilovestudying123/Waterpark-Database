@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EmployeeRoleController">
+   <children>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="804.0">
+         <children>
+            <TableView prefHeight="395.0" prefWidth="829.0">
+               <columns>
+                  <TableColumn id="employeeRoleNumberColumn" fx:id="employeeRoleNumberColumn" prefWidth="125.3333078622818" text="Employee #" />
+                  <TableColumn id="employeeRoleTitle" fx:id="employeeRoleTitle" prefWidth="413.99998474121094" text="Title" />
+                  <TableColumn id="employeeRoleFromDate" fx:id="employeeRoleFromDate" prefWidth="148.0" text="From Date" />
+                  <TableColumn id="employeeRoleToDate" fx:id="employeeRoleToDate" prefWidth="141.33331298828125" text="To Date" />
+               </columns>
+            </TableView>
+            <VBox layoutX="189.0" layoutY="400.0" prefHeight="91.0" prefWidth="451.0">
+               <children>
+                  <HBox prefHeight="39.0" prefWidth="451.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="73.0" text="Employee #" />
+                        <TextField fx:id="txtERREmpID" prefHeight="25.0" prefWidth="133.0" />
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="36.0" text=" Title" />
+                        <TextField fx:id="txtERRTitle" layoutX="73.0" layoutY="10.0" prefHeight="25.0" prefWidth="221.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="35.0" prefWidth="451.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="63.0" text="From Date" />
+                        <TextField fx:id="txtERRFromDate" prefHeight="25.0" prefWidth="164.0" />
+                        <Label prefHeight="30.0" prefWidth="49.0" text=" To Date" />
+                        <TextField fx:id="txtERRToDate" prefHeight="25.0" prefWidth="179.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="259.0" prefHeight="35.0" prefWidth="451.0">
+                     <children>
+                        <Button fx:id="ERRbtnAdd" mnemonicParsing="false" onAction="#addEmpRole" text="Add" />
+                        <Button fx:id="ERRbtnUpdate" mnemonicParsing="false" onAction="#updateEmpRole" text="Update" />
+                        <Button fx:id="ERRbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteEmpRole" text="Delete" />
+                        <Button fx:id="ERRbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <TextField fx:id="txtERRSearch" layoutX="23.0" layoutY="417.0" />
+            <Button fx:id="ERRbtnSearch" layoutX="72.0" layoutY="449.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

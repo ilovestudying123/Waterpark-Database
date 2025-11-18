@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LockerController">
+   <children>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="820.0">
+         <children>
+            <TableView layoutX="-1.0" prefHeight="357.0" prefWidth="821.0">
+               <columns>
+                  <TableColumn id="LRLockerNumberColumn" fx:id="LRLockerNumberColumn" prefWidth="123.99998474121094" text="Locker #" />
+                  <TableColumn id="LRTicketNumberColumn" fx:id="LRTicketNumberColumn" prefWidth="132.66665649414062" text="Ticket #" />
+                  <TableColumn id="LRSizeColumn" fx:id="LRSizeColumn" prefWidth="112.6666259765625" text="Size" />
+                  <TableColumn id="LRAvailabilityStatusColumn" fx:id="LRAvailabilityStatusColumn" minWidth="0.0" prefWidth="136.66668701171875" text="Availability Status" />
+               </columns>
+            </TableView>
+            <VBox layoutX="185.0" layoutY="364.0" prefHeight="114.0" prefWidth="451.0">
+               <children>
+                  <HBox prefHeight="28.0" prefWidth="451.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="51.0" text="Locker #" />
+                        <TextField fx:id="txtLRLockerNumber" prefHeight="25.0" prefWidth="170.0" />
+                        <Label prefHeight="27.0" prefWidth="51.0" text=" Ticket #" />
+                        <TextField fx:id="txtLRTicketNumber" prefHeight="25.0" prefWidth="181.0" />
+                     </children>
+                  </HBox>
+                  <MenuButton fx:id="mnbtnSize" mnemonicParsing="false" text="Size">
+                     <items>
+                        <MenuItem fx:id="mnSmall" mnemonicParsing="false" text="Small" />
+                        <MenuItem fx:id="mnMedium" mnemonicParsing="false" text="Medium" />
+                        <MenuItem fx:id="mnLarge" mnemonicParsing="false" text="Large" />
+                     </items>
+                  </MenuButton>
+                  <CheckBox fx:id="chkAvailabilityStatus" mnemonicParsing="false" prefHeight="22.0" prefWidth="115.0" text="Availability Status" />
+                  <HBox layoutX="10.0" layoutY="259.0" prefHeight="35.0" prefWidth="451.0">
+                     <children>
+                        <Button fx:id="LRbtnAdd" mnemonicParsing="false" onAction="#addLocker" text="Add" />
+                        <Button fx:id="LRbtnUpdate" mnemonicParsing="false" onAction="#updateLocker" text="Update" />
+                        <Button fx:id="LRbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteLocker" text="Delete" />
+                        <Button fx:id="LRbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <TextField fx:id="txtLRSearch" layoutX="21.0" layoutY="421.0" />
+            <Button fx:id="LRbtnSearch" layoutX="70.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

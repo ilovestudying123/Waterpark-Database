@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.IncidentController">
+   <children>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="531.0" prefWidth="822.0">
+         <children>
+            <TableView fx:id="CustomerTable1" prefHeight="299.0" prefWidth="821.0">
+               <columns>
+                  <TableColumn id="IRIncidentNumberColumn" fx:id="IRIncidentNumberColumn" prefWidth="76.00000250339508" text="Incident #" />
+                  <TableColumn id="IRDateOfIncidentColumn" fx:id="IRDateOfIncidentColumn" prefWidth="102.66667938232422" text="Date of Incident" />
+                  <TableColumn id="IRIncidentDescColumn" fx:id="IRIncidentDescColumn" prefWidth="171.99998474121094" text="Incident Description" />
+                  <TableColumn id="IRInjuriesDescColumn" fx:id="IRInjuriesDescColumn" prefWidth="145.33331298828125" text="Injuries Description" />
+                  <TableColumn id="IRReimbursementStatusColumn" fx:id="IRReimbursementStatusColumn" prefWidth="143.33340454101562" text="Reimbursement Status" />
+                  <TableColumn id="IREmpNumberColumn" fx:id="IREmpNumberColumn" prefWidth="116.0" text="Employee #" />
+                  <TableColumn id="IRRideNumberColumn" fx:id="IRRideNumberColumn" minWidth="2.0" prefWidth="66.0" text="Ride #" />
+               </columns>
+            </TableView>
+            <VBox layoutX="185.0" layoutY="310.0" prefHeight="209.0" prefWidth="451.0">
+               <children>
+                  <HBox prefHeight="35.0" prefWidth="451.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="63.0" text="Incident #" />
+                        <TextField fx:id="txtIRIncidentNumber" prefHeight="25.0" prefWidth="175.0" />
+                        <Label prefHeight="30.0" prefWidth="35.0" text=" D.o.I" />
+                        <TextField fx:id="txtIRDateOfIncident" prefHeight="25.0" prefWidth="177.0" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="10.0" layoutY="95.0" text="Incident Description" />
+                  <TextField fx:id="txtIncidentDescription" layoutX="10.0" layoutY="113.0" />
+                  <Label layoutX="10.0" layoutY="138.0" text="Injuries Description" />
+                  <TextField fx:id="txtInjuriesDescription" layoutX="10.0" layoutY="155.0" />
+                  <HBox prefHeight="29.0" prefWidth="451.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="67.0" text="Employee #" />
+                        <TextField fx:id="txtIREmployeeNumber" prefHeight="29.0" prefWidth="174.0" />
+                        <Label prefHeight="28.0" prefWidth="41.0" text=" Ride #" />
+                        <TextField fx:id="txtIRRideNumber" prefHeight="29.0" prefWidth="174.0" />
+                     </children>
+                  </HBox>
+                  <CheckBox fx:id="chkReimbursementStatus" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Reimbursement Status" />
+                  <HBox layoutX="10.0" layoutY="259.0" prefHeight="35.0" prefWidth="451.0">
+                     <children>
+                        <Button fx:id="IRbtnAdd" mnemonicParsing="false" onAction="#addIncident" text="Add" />
+                        <Button fx:id="IRbtnUpdate" mnemonicParsing="false" onAction="#updateIncident" text="Update" />
+                        <Button fx:id="IRbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteIncident" text="Delete" />
+                        <Button fx:id="IRbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <TextField fx:id="txtIRSearch" layoutX="21.0" layoutY="378.0" />
+            <Button fx:id="IRbtnSearch" layoutX="70.0" layoutY="409.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

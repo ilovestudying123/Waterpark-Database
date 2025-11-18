@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TicketController">
+   <children>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="820.0">
+         <children>
+            <TableView prefHeight="331.0" prefWidth="821.0">
+               <columns>
+                  <TableColumn id="TRTicketNumberColumn" fx:id="TRTicketNumberColumn" prefWidth="123.99998474121094" text="Ticket #" />
+                  <TableColumn id="TRCustomerNumberColumn" fx:id="TRCustomerNumberColumn" prefWidth="132.66665649414062" text="Customer #" />
+                  <TableColumn id="TRTicketTypeColumn" fx:id="TRTicketTypeColumn" prefWidth="112.6666259765625" text="Ticket Type" />
+                  <TableColumn id="TRDatePurchasedColumn" fx:id="TRDatePurchasedColumn" minWidth="0.0" prefWidth="136.66668701171875" text="Date Purchased" />
+                  <TableColumn id="TRDateOfUseColumn" fx:id="TRDateOfUseColumn" prefWidth="124.0" text="Date of Use" />
+               </columns>
+            </TableView>
+            <VBox layoutX="185.0" layoutY="342.0" prefHeight="136.0" prefWidth="451.0">
+               <children>
+                  <HBox prefHeight="28.0" prefWidth="451.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="51.0" text="Ticket #" />
+                        <TextField fx:id="txtTRTicketNumber" prefHeight="25.0" prefWidth="164.0" />
+                        <Label prefHeight="30.0" prefWidth="71.0" text=" Customer #" />
+                        <TextField fx:id="txtTRCustomerNumber" prefHeight="25.0" prefWidth="165.0" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="10.0" layoutY="95.0" text="Ticket Type" />
+                  <TextField fx:id="txtTRTicketType" layoutX="10.0" layoutY="113.0" />
+                  <HBox prefHeight="32.0" prefWidth="451.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="89.0" text="Date Purchased" />
+                        <TextField fx:id="txtTRDatePurchased" prefHeight="25.0" prefWidth="137.0" />
+                        <Label prefHeight="26.0" prefWidth="71.0" text=" Date of Use" />
+                        <TextField fx:id="txtTRDateOfUse" prefHeight="21.0" prefWidth="153.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="259.0" prefHeight="35.0" prefWidth="451.0">
+                     <children>
+                        <Button fx:id="TRbtnAdd" mnemonicParsing="false" onAction="#addTicket" text="Add" />
+                        <Button fx:id="TRbtnUpdate" mnemonicParsing="false" onAction="#updateTicket" text="Update" />
+                        <Button fx:id="TRbtnDelete" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteTicket" text="Delete" />
+                        <Button fx:id="TRbtnClear" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <TextField fx:id="txtTRSearch" layoutX="24.0" layoutY="422.0" />
+            <Button fx:id="TRbtnSearch" layoutX="73.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
