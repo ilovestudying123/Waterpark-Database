@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="816.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.waterparkdbapp.RideMaintenanceController">
+   <children>
+      <AnchorPane prefHeight="525.0" prefWidth="823.0">
+         <children>
+            <ImageView fitHeight="552.0" fitWidth="816.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GooLagoonRideMaintenance.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnRMProceed" layoutX="328.0" layoutY="361.0" mnemonicParsing="false" onAction="#finishMaintenance" prefHeight="30.0" prefWidth="166.0" text="Proceed" />
+            <Label fx:id="lblOutput" layoutX="458.0" layoutY="304.0" prefHeight="20.0" prefWidth="177.0" style="-fx-font-size: 14px; -fx-text-fill: red;" text="" />
+            <Button fx:id="btnRMBack" layoutX="171.0" layoutY="378.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+            <ComboBox fx:id="cmbSelectRide" layoutX="333.0" layoutY="194.0" prefWidth="150.0" />
+            <Text layoutX="379.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Ride" />
+            <Button fx:id="btnRMBeginInspection" layoutX="356.0" layoutY="225.0" mnemonicParsing="false" onAction="#beginInspection" text="Begin Inspection" />
+            <TextField fx:id="txtRMPHLevel" layoutX="185.0" layoutY="274.0" prefHeight="25.0" prefWidth="90.0" />
+            <TextField fx:id="txtRMChlorineLevel" layoutX="366.0" layoutY="274.0" prefHeight="25.0" prefWidth="90.0" />
+            <TextField fx:id="txtRMWaterTemperature" layoutX="545.0" layoutY="274.0" prefHeight="25.0" prefWidth="90.0" />
+            <Text layoutX="206.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pH Level" />
+            <Text layoutX="372.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chlorine Level" />
+            <Text layoutX="539.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Water Temperature" />
+            <TextField fx:id="txtRMViolationCount" layoutX="185.0" layoutY="328.0" prefHeight="25.0" prefWidth="90.0" />
+            <Text layoutX="189.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Violation Count" />
+            <TextField fx:id="txtRMViolationDescription" layoutX="292.0" layoutY="328.0" prefHeight="25.0" prefWidth="344.0" />
+            <Text layoutX="293.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Violation Description" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
